@@ -3,6 +3,7 @@ module flickvault.baha.tn
 go 1.21.1
 
 require (
+	github.com/felixge/httpsnoop v1.0.2 // indirect
 	github.com/go-mail/mail/v2 v2.3.0 // indirect
 	github.com/golang-migrate/migrate v3.5.4+incompatible // indirect
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
