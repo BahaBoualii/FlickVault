@@ -25,4 +25,3 @@ func NewModels(db *sql.DB) Models {
 		Tokens:      TokenModel{DB: db},
 	}
 }
-
