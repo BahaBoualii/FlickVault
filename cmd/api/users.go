@@ -9,6 +9,12 @@ import (
 	"flickvault.baha.tn/internal/validator"
 )
 
+// @title			Register User
+// @version		1.0
+// @description	This is an endpoint to register a new user
+// @accept			json
+// @produce		json
+// @router			/v1/users [post]
 func (app *application) registerUserHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
 		Name     string `json:"name"`

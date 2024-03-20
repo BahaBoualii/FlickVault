@@ -1,0 +1,14 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a simple API for accessing and managing movie information, inspired by the Open Movie Database API.",
+        "title": "Movie information API",
+        "contact": {
+            "name": "Baha Bouali"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:4000",
+    "basePath": "/v1",
+    "paths": {}
+}
