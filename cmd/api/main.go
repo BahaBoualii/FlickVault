@@ -63,8 +63,8 @@ type application struct {
 
 //	@contact.name	Baha Bouali
 
-//	@host		localhost:4000
-//	@BasePath	/v1
+// @host		localhost:4000
+// @BasePath	/v1
 func main() {
 	var cfg config
 

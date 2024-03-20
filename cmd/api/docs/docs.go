@@ -16,7 +16,89 @@ const docTemplate = `{
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {}
+    "paths": {
+        "/healthcheck": {
+            "get": {
+                "tags": [
+                    "healthcheck"
+                ],
+                "summary": "Gives a brief healthcheck details about the applications",
+                "responses": {}
+            }
+        },
+        "/movies": {
+            "get": {
+                "tags": [
+                    "movies"
+                ],
+                "summary": "List all movies with each one's details",
+                "responses": {}
+            },
+            "post": {
+                "tags": [
+                    "movies"
+                ],
+                "summary": "Add a new movie",
+                "responses": {}
+            }
+        },
+        "/movies/{id}": {
+            "get": {
+                "tags": [
+                    "movies"
+                ],
+                "summary": "Show a specific movie details",
+                "responses": {}
+            },
+            "delete": {
+                "tags": [
+                    "movies"
+                ],
+                "summary": "Delete an existing movie",
+                "responses": {}
+            },
+            "patch": {
+                "tags": [
+                    "movies"
+                ],
+                "summary": "Update an existing movie",
+                "responses": {}
+            }
+        },
+        "/users": {
+            "post": {
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "users"
+                ],
+                "summary": "Register a new user",
+                "responses": {}
+            }
+        },
+        "/users/activated": {
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Activate a new added user",
+                "responses": {}
+            }
+        },
+        "/users/auth": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Authenticate a user",
+                "responses": {}
+            }
+        }
+    }
 }`
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it

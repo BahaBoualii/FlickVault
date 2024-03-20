@@ -7,5 +7,60 @@ info:
     inspired by the Open Movie Database API.
   title: Movie information API
   version: "1.0"
-paths: {}
+paths:
+  /healthcheck:
+    get:
+      responses: {}
+      summary: Gives a brief healthcheck details about the applications
+      tags:
+      - healthcheck
+  /movies:
+    get:
+      responses: {}
+      summary: List all movies with each one's details
+      tags:
+      - movies
+    post:
+      responses: {}
+      summary: Add a new movie
+      tags:
+      - movies
+  /movies/{id}:
+    delete:
+      responses: {}
+      summary: Delete an existing movie
+      tags:
+      - movies
+    get:
+      responses: {}
+      summary: Show a specific movie details
+      tags:
+      - movies
+    patch:
+      responses: {}
+      summary: Update an existing movie
+      tags:
+      - movies
+  /users:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses: {}
+      summary: Register a new user
+      tags:
+      - users
+  /users/activated:
+    put:
+      responses: {}
+      summary: Activate a new added user
+      tags:
+      - users
+  /users/auth:
+    post:
+      responses: {}
+      summary: Authenticate a user
+      tags:
+      - users
 swagger: "2.0"

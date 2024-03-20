@@ -9,12 +9,13 @@ import (
 	"flickvault.baha.tn/internal/validator"
 )
 
-// @title			Register User
-// @version		1.0
-// @description	This is an endpoint to register a new user
-// @accept			json
-// @produce		json
-// @router			/v1/users [post]
+// RegisterUser godoc
+//
+//	@Summary	Register a new user
+//	@Tags		users
+//	@Accept		json
+//	@Produce	json
+//	@Router		/users [post]
 func (app *application) registerUserHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
 		Name     string `json:"name"`
@@ -91,6 +92,11 @@ func (app *application) registerUserHandler(w http.ResponseWriter, r *http.Reque
 	}
 }
 
+// ActivateUser godoc
+//
+//	@Summary	Activate a new added user
+//	@Tags		users
+//	@Router		/users/activated [put]
 func (app *application) activateUserHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
 		TokenPlainText string `json:"token"`

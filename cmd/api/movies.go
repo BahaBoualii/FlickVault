@@ -9,6 +9,11 @@ import (
 	"flickvault.baha.tn/internal/validator"
 )
 
+// CreateMovie godoc
+//
+//	@Summary	Add a new movie
+//	@Tags		movies
+//	@Router		/movies [post]
 func (app *application) createMovieHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
 		Title   string       `json:"title"`
@@ -51,6 +56,11 @@ func (app *application) createMovieHandler(w http.ResponseWriter, r *http.Reques
 	}
 }
 
+// ShowMovie godoc
+//
+//	@Summary	Show a specific movie details
+//	@Tags		movies
+//	@Router		/movies/{id} [get]
 func (app *application) showMovieHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := app.readIDParam(r)
 	if err != nil {
@@ -75,6 +85,11 @@ func (app *application) showMovieHandler(w http.ResponseWriter, r *http.Request)
 	}
 }
 
+// UpdateMovie godoc
+//
+//	@Summary	Update an existing movie
+//	@Tags		movies
+//	@Router		/movies/{id} [patch]
 func (app *application) updateMovieHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := app.readIDParam(r)
 	if err != nil {
@@ -146,6 +161,11 @@ func (app *application) updateMovieHandler(w http.ResponseWriter, r *http.Reques
 	}
 }
 
+// DeleteMovie godoc
+//
+//	@Summary	Delete an existing movie
+//	@Tags		movies
+//	@Router		/movies/{id} [delete]
 func (app *application) deleteMovieHandler(w http.ResponseWriter, r *http.Request) {
 	id, err := app.readIDParam(r)
 	if err != nil {
@@ -170,6 +190,11 @@ func (app *application) deleteMovieHandler(w http.ResponseWriter, r *http.Reques
 	}
 }
 
+// ListAllMovies godoc
+//
+//	@Summary	List all movies with each one's details
+//	@Tags		movies
+//	@Router		/movies [get]
 func (app *application) listMoviesHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
 		Title  string

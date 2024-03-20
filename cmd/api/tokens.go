@@ -9,6 +9,11 @@ import (
 	"flickvault.baha.tn/internal/validator"
 )
 
+// AuthenticateUser godoc
+//
+//	@Summary	Authenticate a user
+//	@Tags		users
+//	@Router		/users/auth [post]
 func (app *application) createAuthenticationTokenHandler(w http.ResponseWriter, r *http.Request) {
 	var input struct {
 		Email    string `json:"email"`

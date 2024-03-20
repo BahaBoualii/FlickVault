@@ -4,6 +4,11 @@ import (
 	"net/http"
 )
 
+// Healthcheck godoc
+//
+//	@Summary	Gives a brief healthcheck details about the applications
+//	@Tags		healthcheck
+//	@Router		/healthcheck [get]
 func (app *application) healthcheckHandler(w http.ResponseWriter, r *http.Request) {
 
 	env := envelope{
